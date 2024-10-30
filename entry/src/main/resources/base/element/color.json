@@ -1,0 +1,32 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "fontColor999",
+      "value": "#999"
+    },
+    {
+      "name": "borderGreen",
+      "value": "#d5ede6"
+    },
+    {
+      "name": "bg_green_second",
+      "value": "#d5ede6"
+    },
+    {
+      "name": "bg_green_primary",
+      "value": "#69b7ad"
+    },
+    {
+      "name": "font_colo_second_green",
+      "value": "#d5ede6"
+    },
+    {
+      "name": "font_colo_green",
+      "value": "#69b7ad"
+    }
+  ]
+}
