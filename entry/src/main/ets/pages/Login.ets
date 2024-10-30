@@ -50,7 +50,7 @@ struct Login {
             color:$r('app.color.borderGreen')
           })
           .borderRadius(15)
-git
+
         Row(){
           Radio({ value: 'Radio1', group: 'radio' })
             .radioStyle({
