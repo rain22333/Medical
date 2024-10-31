@@ -1,51 +1,71 @@
+import { TabBarClass } from '../models/Tab'
+
 @Entry
 @Component
 struct Index {
-  // 倒计时
-  @State currentNumber: number = 3; // 初始化为3秒
-  timer: number | null = null; // 定时器引用
 
-  aboutToAppear(): void {
-    // 在页面加载时启动定时器
-    this.currentNumber = 3; // 重置倒计时
-    this.timer = setInterval(() => {
-      this.currentNumber--; // 每秒减少
-      if (this.currentNumber <= 0) {
-        clearInterval(this.timer); // 清除定时器
 
-      }
-    }, 1000);
-  }
+  @State
+  currentIndex:number = 0
 
-  navigateToHome(): void {
-    // 跳转到首页，替换为你的路由逻辑
-    // 比如使用 router.push('/home');
-    console.log('跳转到首页'); // 测试用
-  }
 
-  build() {
-    Stack() {
-      Column() {
-        Image($r('app.media.pic'))
-          .width("80%")
-          .margin({ top: '35%' });
+  @State
+  tabList:TabBarClass[] = [
+    {
+      icon:$r("app.media.icon_40px_tab_icon01"),
+      name:'Index',
+      title:'首页'
+    },
+    {
+      icon:$r("app.media.icon_40px_tab_icon02"),
+      name:'People',
+      title:'居民'
+    },
+    {
+      icon:$r("app.media.icon_40px_tab_icon03"),
+      name:'Message',
+      title:'消息'
+    },
+    {
+      icon:$r("app.media.icon_40px_tab_icon04"),
+      name:'My',
+      title:'我的'
+    }
+  ]
 
-        Image($r('app.media.title'))
-          .width("30%")
-          .margin({ bottom: '10%' });
-      }
-      .width("100%")
-      .height("100%")
-      .justifyContent(FlexAlign.SpaceBetween);
 
-      Text('跳过  ' + this.currentNumber)
-        .width(100)
-        .padding({ top: 8, bottom: 8 })
-        .backgroundColor('#666')
-        .borderRadius(5)
-        .textAlign(TextAlign.Center)
-        .fontColor('#fff')
-        .position({ x: '60%' });
+  @Builder
+  CommonTabBar(item:TabBarClass){
+    Column(){
+      Image(item.icon)
+        .width(20)
+        .height(20)
+      Text(item.title)
+        .fontSize(12)
+        .fontColor(item.name === this.tabList[this.currentIndex].name ? $r('app.color.font_colo_green') : $r('app.color.font_black'))
+        .margin({
+          top:5
+        })
     }
   }
+
+
+   build() {
+      Tabs({index: $$this.currentIndex}){
+        ForEach(this.tabList,(item:TabBarClass)=>{
+          TabContent(){
+            if(item.name === 'Index'){
+              Text('我的')
+            }else if(item.name === 'People'){
+              Text('居民')
+            }else if(item.name === 'Message'){
+              Text('消息')
+            }else if(item.name === 'My'){
+              Text('我的')
+            }
+          }.tabBar(this.CommonTabBar(item))
+        },(item:TabBarClass)=> item.name.toString())
+      }.barPosition(BarPosition.End)
+     .animationDuration(200)
+   }
 }

@@ -27,6 +27,14 @@
     {
       "name": "font_colo_green",
       "value": "#69b7ad"
+    },
+    {
+      "name": "font_black",
+      "value": "#000"
+    },
+    {
+      "name": "font_green",
+      "value": "#69b7ad"
     }
   ]
 }
