@@ -2,6 +2,8 @@
   "src": [
     "pages/Index",
     "pages/Login",
-    "pages/WelCome"
+    "pages/WelCome",
+    "pages/Medical",
+    "component/medical/NewArchives"
   ]
 }

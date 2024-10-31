@@ -1,3 +1,5 @@
+import { router } from '@kit.ArkUI'
+
 @Entry
 @Component
 struct Login {
@@ -14,7 +16,7 @@ struct Login {
             Text("登录")
               .fontSize(26)
             Text("欢迎使用家医生医生端")
-              .fontColor($r('app.color.fontColor999'))
+              .fontColor($r('app.color.font_color_999'))
           }.alignItems(HorizontalAlign.Start)
 
           Image($r('app.media.03'))
@@ -72,10 +74,10 @@ struct Login {
 
           Text("我已阅读并同意")
             .fontSize(16)
-            .fontColor($r('app.color.fontColor999'))
+            .fontColor($r('app.color.font_color_999'))
           Text("《用户隐私政策》")
             .fontSize(16)
-            .fontColor($r('app.color.font_colo_green'))
+            .fontColor($r('app.color.font_color_green'))
         }
 
         Button("登录")
@@ -85,6 +87,11 @@ struct Login {
           .borderRadius(15)
           .padding(5)
           .type(ButtonType.Normal)
+          .onClick(()=>{
+            router.pushUrl({
+              url:'pages/Index'
+            })
+          })
 
       }.width("100%")
       .height("100%")

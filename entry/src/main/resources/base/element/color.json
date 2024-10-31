@@ -5,7 +5,7 @@
       "value": "#FFFFFF"
     },
     {
-      "name": "fontColor999",
+      "name": "font_color_999",
       "value": "#999"
     },
     {
@@ -21,11 +21,11 @@
       "value": "#69b7ad"
     },
     {
-      "name": "font_colo_second_green",
+      "name": "font_color_second_green",
       "value": "#d5ede6"
     },
     {
-      "name": "font_colo_green",
+      "name": "font_color_green",
       "value": "#69b7ad"
     },
     {
@@ -35,6 +35,14 @@
     {
       "name": "font_green",
       "value": "#69b7ad"
+    },
+    {
+      "name": "font_color_orange",
+      "value": "#f0ae91"
+    },
+    {
+      "name": "font_color_orange_second",
+      "value": "#fdf2e9"
     }
   ]
 }

@@ -1,4 +1,5 @@
 import { TabBarClass } from '../models/Tab'
+import Medical from './Medical'
 
 @Entry
 @Component
@@ -42,7 +43,7 @@ struct Index {
         .height(20)
       Text(item.title)
         .fontSize(12)
-        .fontColor(item.name === this.tabList[this.currentIndex].name ? $r('app.color.font_colo_green') : $r('app.color.font_black'))
+        .fontColor(item.name === this.tabList[this.currentIndex].name ? $r('app.color.font_color_green') : $r('app.color.font_black'))
         .margin({
           top:5
         })
@@ -55,7 +56,7 @@ struct Index {
         ForEach(this.tabList,(item:TabBarClass)=>{
           TabContent(){
             if(item.name === 'Index'){
-              Text('我的')
+              Medical()
             }else if(item.name === 'People'){
               Text('居民')
             }else if(item.name === 'Message'){
