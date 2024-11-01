@@ -13,12 +13,36 @@
       "value": "#d5ede6"
     },
     {
+      "name": "border_ddd",
+      "value": "#ddd"
+    },
+    {
+      "name": "border_gray_f5f7fb",
+      "value": "#f5f7fb"
+    },
+    {
+      "name": "border_green_primary",
+      "value": "#69b7ad"
+    },
+    {
       "name": "bg_green_second",
       "value": "#d5ede6"
     },
     {
       "name": "bg_green_primary",
       "value": "#69b7ad"
+    },
+    {
+      "name": "bg_gray_primary",
+      "value": "#f3f4f5"
+    },
+    {
+      "name": "bg_gray_second",
+      "value": "#ccc"
+    },
+    {
+      "name": "bg_gray_ddd",
+      "value": "#ddd"
     },
     {
       "name": "font_color_second_green",
@@ -33,6 +57,10 @@
       "value": "#000"
     },
     {
+      "name": "font_color_333",
+      "value": "#333"
+    },
+    {
       "name": "font_green",
       "value": "#69b7ad"
     },
@@ -43,6 +71,22 @@
     {
       "name": "font_color_orange_second",
       "value": "#fdf2e9"
+    },
+    {
+      "name": "font_color_ccc",
+      "value": "#cccccc"
+    },
+    {
+      "name": "font_color_ddd",
+      "value": "#ddd"
+    },
+    {
+      "name": "font_color_666",
+      "value": "#666"
+    },
+    {
+      "name": "bg_gray_f5f7fb",
+      "value": "#f5f7fb"
     }
   ]
 }

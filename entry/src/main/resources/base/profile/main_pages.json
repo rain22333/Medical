@@ -4,6 +4,7 @@
     "pages/Login",
     "pages/WelCome",
     "pages/Medical",
-    "component/medical/NewArchives"
+    "component/medical/NewArchives",
+    "component/medical/Relevancy"
   ]
 }

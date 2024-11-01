@@ -1,3 +1,5 @@
+import { router } from '@kit.ArkUI'
+
 @Entry
 @Component
 struct Medical {
@@ -57,7 +59,11 @@ struct Medical {
 
       // 快捷操作图标
       Row() {
-        this.quickAction("app.media.icon_120px_newArchives", "新建档案")
+        this.quickAction("app.media.icon_120px_newArchives", "新建档案",()=>{
+          router.pushUrl({
+            url:"component/medical/NewArchives"
+          })
+        })
         this.quickAction("app.media.icon_120px_contract_management", "签约管理")
         this.quickAction("app.media.icon_120px_service_manage", "服务管理")
       }
@@ -97,10 +103,12 @@ struct Medical {
 
   // 快捷操作单元
   @Builder
-  quickAction(icon: string, label: string) {
+  quickAction(icon: string, label: string,click?:()=>void) {
     Column() {
       Image($r(icon))
         .width(65)
+        // 调用可能传入的事件
+        .onClick(click)
       Text(label)
         .fontSize(14)
         .fontColor($r('app.color.font_color_999'))
