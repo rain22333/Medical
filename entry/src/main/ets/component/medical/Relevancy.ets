@@ -2,6 +2,7 @@ import { router } from '@kit.ArkUI' // 导入路由模块
 
 @Entry
 @Component
+@Preview
 struct Relevancy {
   // 联系人数据，按字母分组
   private contacts: Contact[][] = [

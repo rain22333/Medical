@@ -260,6 +260,11 @@ struct NewArchives {
               bottom: 15
             })
             .type(ButtonType.Normal)
+            .onClick(()=>{
+              router.pushUrl({
+                url:"component/medical/Agency"
+              })
+            })
           Divider()
         }.width("100%")
         .padding(15)

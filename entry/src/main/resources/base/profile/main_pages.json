@@ -5,6 +5,8 @@
     "pages/WelCome",
     "pages/Medical",
     "component/medical/NewArchives",
-    "component/medical/Relevancy"
+    "component/medical/Relevancy",
+    "component/medical/Agency",
+    "component/medical/NewPeopleSuccess"
   ]
 }
