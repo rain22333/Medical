@@ -222,6 +222,11 @@ struct Medical {
           .fontColor($r('app.color.font_color_999'))
           .layoutWeight(1)
           .textAlign(TextAlign.End)
+          .onClick(()=>{
+            router.pushUrl({
+              url:"component/medical/ToBeServed"
+            })
+          })
       }.width("100%")
 
       // 服务申请的详细内容
@@ -245,10 +250,10 @@ struct Medical {
         Row({ space: 5 }) {
           Text("韦栋")
           Text("40岁")
-            .fontSize(14)
+            .fontSize(12)
             .fontColor($r('app.color.font_color_999'))
           Text("机构门诊")
-            .fontSize(14)
+            .fontSize(12)
             .fontColor($r('app.color.font_color_second_green'))
             .layoutWeight(1)
           Text("待审核")

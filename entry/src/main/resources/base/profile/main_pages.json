@@ -8,6 +8,7 @@
     "component/medical/Relevancy",
     "component/medical/Agency",
     "component/medical/NewPeopleSuccess",
-    "component/medical/ToBeSigned"
+    "component/medical/ToBeSigned",
+    "component/medical/ToBeServed"
   ]
 }
