@@ -64,7 +64,11 @@ struct Medical {
             url:"component/medical/NewArchives"
           })
         })
-        this.quickAction("app.media.icon_120px_contract_management", "签约管理")
+        this.quickAction("app.media.icon_120px_contract_management", "签约管理",()=>{
+          router.pushUrl({
+            url:"component/medical/ContractManagement"
+          })
+        })
         this.quickAction("app.media.icon_120px_service_manage", "服务管理")
       }
       .width("100%")

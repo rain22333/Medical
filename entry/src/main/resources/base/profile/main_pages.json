@@ -9,6 +9,8 @@
     "component/medical/Agency",
     "component/medical/NewPeopleSuccess",
     "component/medical/ToBeSigned",
-    "component/medical/ToBeServed"
+    "component/medical/ToBeServed",
+    "component/medical/ContractManagement",
+    "component/medical/ContractDetails"
   ]
 }
