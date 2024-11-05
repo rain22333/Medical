@@ -22,7 +22,7 @@
     },
     {
       "name": "border_green_primary",
-      "value": "#69b7ad"
+      "value": "#49b9ad"
     },
     {
       "name": "bg_green_second",
@@ -30,7 +30,7 @@
     },
     {
       "name": "bg_green_primary",
-      "value": "#69b7ad"
+      "value": "#49b9ad"
     },
     {
       "name": "bg_gray_primary",
@@ -50,7 +50,7 @@
     },
     {
       "name": "font_color_green",
-      "value": "#69b7ad"
+      "value": "#49b9ad"
     },
     {
       "name": "font_black",
@@ -62,7 +62,7 @@
     },
     {
       "name": "font_green",
-      "value": "#69b7ad"
+      "value": "#49b9ad"
     },
     {
       "name": "font_color_orange",

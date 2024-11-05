@@ -4,6 +4,7 @@ import { router } from '@kit.ArkUI'
 @Component
 struct NewPeopleSuccess {
 
+
   build() {
 
     Column(){
@@ -58,6 +59,11 @@ struct NewPeopleSuccess {
               color:$r('app.color.border_green_primary')
             })
             .borderRadius(10)
+            .onClick(()=>{
+              router.pushUrl({
+                url:"pages/Index"
+              })
+            })
         }.padding({
           left:10,
           right:10

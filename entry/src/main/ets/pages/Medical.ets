@@ -134,6 +134,11 @@ struct Medical {
           .fontColor($r('app.color.font_color_999'))
           .layoutWeight(1)
           .textAlign(TextAlign.End)
+          .onClick(()=>{
+            router.pushUrl({
+              url:"component/medical/ToBeSigned"
+            })
+          })
       }.width("100%")
 
       // 申请详情内容
