@@ -1,4 +1,5 @@
 import { it } from '@ohos/hypium'
+import { router } from '@kit.ArkUI'
 
 @Entry
 @Component
@@ -12,10 +13,18 @@ struct ContractManagement {
       Row(){
         Image($r('app.media.icon_40px_left_arrow'))
           .width(20)
+          .onClick(()=>{
+            router.back()
+          })
         Text("签约管理")
           .layoutWeight(1)
           .textAlign(TextAlign.Center)
+
       }.width("100%")
+      .padding({
+        left:15,
+        right:15
+      })
 
 
 
@@ -74,7 +83,7 @@ struct ContractManagement {
     .height("100%")
   }
 
-  // 申请详情单元 TODO: 可以传入对象进行渲染
+  // 签约详情单元 TODO: 可以传入对象进行渲染
   @Builder
   ApplyInfo() {
     Row({ space: 5 }) {
@@ -104,6 +113,11 @@ struct ContractManagement {
     }
     .width('100%')
     .padding({ top: 15, bottom: 15 })
+    .onClick(()=>{
+      router.pushUrl({
+        url:"component/medical/ContractDetails"
+      })
+    })
   }
 
   // 信息展示行

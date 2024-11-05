@@ -87,6 +87,14 @@
     {
       "name": "bg_gray_f5f7fb",
       "value": "#f5f7fb"
+    },
+    {
+      "name": "textArea_bg",
+      "value": "#f5f7fb"
+    },
+    {
+      "name": "contract_detail_button_rejected",
+      "value": "#f65755"
     }
   ]
 }

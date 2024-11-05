@@ -2,7 +2,9 @@ import { router } from '@kit.ArkUI'
 
 @Entry
 @Component
-struct ContractDetails {
+struct ToBePaid {
+
+
   build() {
 
     Scroll(){
@@ -14,7 +16,7 @@ struct ContractDetails {
         Row({space:15}){
           Image($r('app.media.icon_40px_remind'))
             .width(25)
-          Text("等待医生审核")
+          Text("审核通过，等待居民支付中")
             .fontColor($r('app.color.font_color_green'))
             .fontWeight(FontWeight.Lighter)
         }.width("100%")
@@ -74,7 +76,24 @@ struct ContractDetails {
         // 签约备注
         this.renderRemark()
 
-        this.renderButton()
+        // 主按钮
+        Row(){
+          Button("主按钮")
+            .backgroundColor($r('app.color.bg_green_primary'))
+            .borderRadius(12)
+            .width("100%")
+            .type(ButtonType.Normal)
+        }.width("100%")
+        .padding({
+          top:5,
+          left:15,
+          right:15,
+          bottom:25
+        })
+        .backgroundColor(Color.White)
+        .margin({
+          top:15
+        })
 
       }
       .width("100%")
@@ -134,47 +153,6 @@ struct ContractDetails {
     Divider()
   }
 
-
-  @Builder
-  renderButton(){
-    Row(){
-      Button("驳回")
-        .width("45%")
-        .type(ButtonType.Normal)
-        .backgroundColor(Color.White)
-        .border({
-          width:1,
-          color:$r('app.color.contract_detail_button_rejected')
-        })
-        .fontColor($r('app.color.contract_detail_button_rejected'))
-        .borderRadius(12)
-        .fontWeight(FontWeight.Lighter)
-
-      Button("审核")
-        .width("45%")
-        .type(ButtonType.Normal)
-        .backgroundColor($r('app.color.bg_green_primary'))
-        .borderRadius(12)
-        .fontWeight(FontWeight.Lighter)
-        .onClick(()=>{
-          router.pushUrl({
-            url:"component/medical/ToBePaid"
-          })
-        })
-
-    }.width("100%")
-    .padding({
-      left:25,
-      right:25,
-      top:5,
-      bottom:25
-    })
-    .backgroundColor(Color.White)
-    .justifyContent(FlexAlign.SpaceAround)
-    .margin({
-      top:15
-    })
-  }
 
 
   // 签约备注

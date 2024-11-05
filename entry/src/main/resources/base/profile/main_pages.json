@@ -11,6 +11,7 @@
     "component/medical/ToBeSigned",
     "component/medical/ToBeServed",
     "component/medical/ContractManagement",
-    "component/medical/ContractDetails"
+    "component/medical/ContractDetails",
+    "component/medical/ToBePaid"
   ]
 }
