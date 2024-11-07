@@ -2,27 +2,25 @@ import { router } from '@kit.ArkUI'
 
 @Entry
 @Component
-struct ToBePaid {
-
+struct AgencyFail {
 
   build() {
-
     Scroll(){
       Column() {
 
         // 头部
         this.renderHeader()
 
-        // 等待医生审核
+        // 已驳回
         Row({space:15}){
-          Image($r('app.media.icon_40px_remind'))
+          Image($r("app.media.icon_40px_overrule"))
             .width(25)
-          Text("审核通过，等待居民支付中")
-            .fontColor($r('app.color.font_color_green'))
+          Text("已驳回")
+            .fontColor($r('app.color.font_color_red'))
             .fontWeight(FontWeight.Lighter)
         }.width("100%")
         .padding(15)
-        .backgroundColor($r('app.color.bg_green_second'))
+        .backgroundColor($r('app.color.bg_pink'))
 
         // 居民信息
         this.renderSectionHeader("居民信息")
@@ -77,29 +75,6 @@ struct ToBePaid {
         // 签约备注
         this.renderRemark()
 
-        // 主按钮
-        Row(){
-          Button("主按钮")
-            .backgroundColor($r('app.color.bg_green_primary'))
-            .borderRadius(12)
-            .width("100%")
-            .type(ButtonType.Normal)
-            .onClick(()=>{
-              router.pushUrl({
-                url:"component/medical/AgencySuccess"
-              })
-            })
-        }.width("100%")
-        .padding({
-          top:5,
-          left:15,
-          right:15,
-          bottom:25
-        })
-        .backgroundColor(Color.White)
-        .margin({
-          top:15
-        })
 
       }
       .width("100%")

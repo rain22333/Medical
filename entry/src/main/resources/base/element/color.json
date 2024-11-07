@@ -95,6 +95,14 @@
     {
       "name": "contract_detail_button_rejected",
       "value": "#f65755"
+    },
+    {
+      "name": "bg_pink",
+      "value": "#FEF1F1"
+    },
+    {
+      "name": "font_color_red",
+      "value": "#F65755"
     }
   ]
 }

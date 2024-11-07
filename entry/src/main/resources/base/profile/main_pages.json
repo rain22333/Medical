@@ -7,11 +7,15 @@
     "component/medical/NewArchives",
     "component/medical/Relevancy",
     "component/medical/Agency",
-    "component/medical/NewPeopleSuccess",
+    "component/response/NewPeopleSuccess",
     "component/medical/ToBeSigned",
     "component/medical/ToBeServed",
     "component/medical/ContractManagement",
     "component/medical/ContractDetails",
-    "component/medical/ToBePaid"
+    "component/medical/ToBePaid",
+    "component/medical/AgencySuccess",
+    "component/medical/AgencyFail",
+    "component/response/Approved",
+    "component/response/TheContractFailed"
   ]
 }

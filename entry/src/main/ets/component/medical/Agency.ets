@@ -121,7 +121,7 @@ struct Agency {
         .backgroundColor($r('app.color.bg_green_primary')) // 设置主按钮背景颜色
         .onClick(()=>{
           router.pushUrl({
-            url:"component/medical/NewPeopleSuccess"
+            url:"component/response/NewPeopleSuccess"
           })})
     }
     .width("100%")
