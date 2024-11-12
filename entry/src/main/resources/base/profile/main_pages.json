@@ -18,6 +18,7 @@
     "component/response/Approved",
     "component/response/TheContractFailed",
     "component/medical/Service/ServiceManagement",
-    "component/medical/Service/WaitForReview"
+    "component/medical/Service/WaitForReview",
+    "component/medical/Service/ServiceApproved"
   ]
 }

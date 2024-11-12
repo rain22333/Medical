@@ -1,22 +1,23 @@
-/**
- * Index-服务管理-待审核
- */
 import { router } from '@kit.ArkUI'
 import { peopleInfo } from '../../common/Info'
 
 @Entry
 @Component
-struct WaitForReview {
+struct ServiceApproved {
+
+
+
   build() {
-    Scroll() {
-      Column() {
+    Scroll(){
+      Column(){
+
         this.renderHeader()
 
         // 等待医生审核
         Row({ space: 15 }) {
           Image($r('app.media.icon_40px_remind'))
             .width(25)
-          Text("等待医生审核")
+          Text("预约服务已申请通过,请按时提供服务")
             .fontColor($r('app.color.font_color_green'))
             .fontWeight(FontWeight.Lighter)
         }.width("100%")
@@ -24,8 +25,10 @@ struct WaitForReview {
         .backgroundColor($r('app.color.bg_green_second'))
 
 
+        // 居民信息
         peopleInfo()
 
+        // 服务信息
         Column() {
           Text("服务信息")
             .fontSize(18)
@@ -43,6 +46,7 @@ struct WaitForReview {
           this.renderInfoRow("服务时间", "2022/05/23 10:30")
           this.renderInfoRow("备注", "最近脖子疼")
           this.renderInfoRow("提交时间", "2022/05/26 10:20:30")
+          this.renderInfoRow("申请时间", "2022/05/26 10:20:30")
 
         }.width("100%")
         .padding({
@@ -56,9 +60,13 @@ struct WaitForReview {
           bottom:15
         })
 
+        // 按钮
         this.renderButton()
 
-      }.backgroundColor($r('app.color.border_gray_f5f7fb'))
+
+      }
+      .width("100%")
+      .backgroundColor($r('app.color.border_gray_f5f7fb'))
     }
     .edgeEffect(EdgeEffect.Spring)
     .friction(0.6)
@@ -68,7 +76,6 @@ struct WaitForReview {
 
   }
 
-  // 头部部分 TODO: 这个也是可以复用的
   @Builder
   renderHeader() {
     Row() {
@@ -86,6 +93,7 @@ struct WaitForReview {
     .padding(15)
     .backgroundColor(Color.White)
   }
+
 
   // 渲染信息行
   @Builder
@@ -138,11 +146,6 @@ struct WaitForReview {
         .borderRadius(12)
         .width("48%")
         .type(ButtonType.Normal)
-        .onClick(()=>{
-          router.pushUrl({
-            url: "component/medical/Service/ServiceApproved"
-          })
-        })
     }.width("100%")
     .justifyContent(FlexAlign.SpaceBetween)
     .backgroundColor(Color.White)
