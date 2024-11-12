@@ -16,6 +16,7 @@
     "component/medical/AgencySuccess",
     "component/medical/AgencyFail",
     "component/response/Approved",
-    "component/response/TheContractFailed"
+    "component/response/TheContractFailed",
+    "component/medical/ServiceManagement"
   ]
 }
