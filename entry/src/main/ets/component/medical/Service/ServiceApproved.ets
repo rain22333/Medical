@@ -94,7 +94,6 @@ struct ServiceApproved {
     .backgroundColor(Color.White)
   }
 
-
   // 渲染信息行
   @Builder
   renderInfoRow(label: string, value: string) {
@@ -110,7 +109,6 @@ struct ServiceApproved {
 
     Divider().width("95%")
   }
-
 
   @Builder
   renderButton(){

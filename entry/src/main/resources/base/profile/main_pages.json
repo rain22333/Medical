@@ -19,6 +19,7 @@
     "component/response/TheContractFailed",
     "component/medical/Service/ServiceManagement",
     "component/medical/Service/WaitForReview",
-    "component/medical/Service/ServiceApproved"
+    "component/medical/Service/ServiceApproved",
+    "component/medical/Service/RejectedService"
   ]
 }
