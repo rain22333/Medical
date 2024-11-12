@@ -1,4 +1,4 @@
-import { router } from '@kit.ArkUI'
+import { renderHeader } from '../../common/Info'
 
 /**
  * 签约管理-签约成功
@@ -11,7 +11,7 @@ struct AgencySuccess {
       Column() {
 
         // 头部
-        this.renderHeader()
+        renderHeader("签约详情","查看协议")
 
         // TODO: 可以将整个页面抽取成公共模块
         // 签约成功
@@ -90,24 +90,6 @@ struct AgencySuccess {
 
   }
 
-  // 头部部分
-  @Builder
-  renderHeader() {
-    Row() {
-      Image($r('app.media.icon_40px_left_arrow'))
-        .width(25)
-        .onClick(() => router.back())
-      Text("签约详情")
-        .fontSize(18)
-      Text("查看协议")
-        .fontSize(14)
-        .fontColor($r('app.color.font_green'))
-    }
-    .width("100%")
-    .justifyContent(FlexAlign.SpaceBetween)
-    .padding(15)
-    .backgroundColor(Color.White)
-  }
 
 
   // 渲染节标题

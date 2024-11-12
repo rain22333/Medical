@@ -1,4 +1,4 @@
-import { peopleInfo } from '../../common/Info'
+import { peopleInfo,renderHeader } from '../../common/Info'
 import { router } from '@kit.ArkUI'
 
 /**
@@ -12,7 +12,7 @@ struct Rejected {
       Scroll(){
         Column(){
 
-          this.renderHeader()
+          renderHeader("服务详情","查看档案")
 
           // 预约服务已被驳回
           Row({ space: 15 }) {
@@ -75,23 +75,7 @@ struct Rejected {
 
     }
 
-    @Builder
-    renderHeader() {
-      Row() {
-        Image($r('app.media.icon_40px_left_arrow'))
-          .width(25)
-          .onClick(() => router.back())
-        Text("服务详情")
-          .fontSize(18)
-        Text("查看档案")
-          .fontSize(14)
-          .fontColor($r('app.color.font_green'))
-      }
-      .width("100%")
-      .justifyContent(FlexAlign.SpaceBetween)
-      .padding(15)
-      .backgroundColor(Color.White)
-    }
+
 
     // 渲染信息行
     @Builder

@@ -1,5 +1,9 @@
 import { router } from '@kit.ArkUI'
+import { renderHeader } from '../../common/Info'
 
+/**
+ * Index-签约管理-签约详情-待审核
+ */
 @Entry
 @Component
 struct ContractDetails {
@@ -8,7 +12,7 @@ struct ContractDetails {
     Scroll(){
       Column() {
         // 头部
-        this.renderHeader()
+        renderHeader("签约详情","查看协议")
 
         // 等待医生审核
         Row({space:15}){
@@ -87,24 +91,6 @@ struct ContractDetails {
 
   }
 
-  // 头部部分
-  @Builder
-  renderHeader() {
-    Row() {
-      Image($r('app.media.icon_40px_left_arrow'))
-        .width(25)
-        .onClick(() => router.back())
-      Text("签约详情")
-        .fontSize(18)
-      Text("查看协议")
-        .fontSize(14)
-        .fontColor($r('app.color.font_green'))
-    }
-    .width("100%")
-    .justifyContent(FlexAlign.SpaceBetween)
-    .padding(15)
-    .backgroundColor(Color.White)
-  }
 
 
   // 渲染节标题
@@ -139,7 +125,7 @@ struct ContractDetails {
   renderButton(){
     Row(){
       Button("驳回")
-        .width("45%")
+        .width("48%")
         .type(ButtonType.Normal)
         .backgroundColor(Color.White)
         .border({
@@ -151,25 +137,27 @@ struct ContractDetails {
         .fontWeight(FontWeight.Lighter)
         .onClick(()=>{
           router.pushUrl({
-            url:"component/medical/Agency/AgencyFail"
+            // 点击跳转到审核驳回页面
+            url:"component/response/TheContractFailed"
           })
         })
       Button("审核")
-        .width("45%")
+        .width("48%")
         .type(ButtonType.Normal)
         .backgroundColor($r('app.color.bg_green_primary'))
         .borderRadius(12)
         .fontWeight(FontWeight.Lighter)
         .onClick(()=>{
           router.pushUrl({
-            url:"component/medical/Agency/ToBePaid"
+            // 审核通过之后跳转到审核成功页面
+            url:"component/response/Approved"
           })
         })
 
     }.width("100%")
     .padding({
-      left:25,
-      right:25,
+      left:15,
+      right:15,
       top:5,
       bottom:25
     })

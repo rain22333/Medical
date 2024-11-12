@@ -12,9 +12,7 @@ struct Approved {
             Image($r('app.media.icon_40px_left_arrow'))
               .width(25)
               .onClick(()=>{
-                router.pushUrl({
-                  url:'pages/Index'
-                })
+                router.back()
               })
             Text("审核通过")
               .fontSize(18)
@@ -43,6 +41,12 @@ struct Approved {
             .borderRadius(10)
             .backgroundColor($r('app.color.bg_green_primary'))
             .fontWeight(FontWeight.Lighter)
+            .onClick(()=>{
+              // 点击跳转到签约详情页面 - 待支付
+              router.pushUrl({
+                url: "component/medical/Agency/ToBePaid"
+              })
+            })
 
           Button("返回首页")
             .width("100%")

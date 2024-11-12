@@ -13,9 +13,7 @@ struct TheContractFailed {
             Image($r('app.media.icon_40px_left_arrow'))
               .width(25)
               .onClick(()=>{
-                router.pushUrl({
-                  url:'pages/Index'
-                })
+                router.back()
               })
             Text("签约失败")
               .fontSize(18)
@@ -51,6 +49,12 @@ struct TheContractFailed {
             .borderRadius(10)
             .backgroundColor($r('app.color.bg_green_primary'))
             .fontWeight(FontWeight.Lighter)
+            .onClick(()=>{
+              // 点击跳转到驳回详情页面
+              router.pushUrl({
+                url:"component/medical/Agency/AgencyFail"
+              })
+            })
 
           Button("返回首页")
             .width("100%")

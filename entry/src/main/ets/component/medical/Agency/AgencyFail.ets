@@ -1,5 +1,5 @@
 import { router } from '@kit.ArkUI'
-
+import { renderHeader } from '../../common/Info'
 
 /**
  * 签约管理-已驳回
@@ -13,7 +13,7 @@ struct AgencyFail {
       Column() {
 
         // 头部
-        this.renderHeader()
+        renderHeader("签约详情","查看协议")
 
         // 已驳回
         Row({space:15}){

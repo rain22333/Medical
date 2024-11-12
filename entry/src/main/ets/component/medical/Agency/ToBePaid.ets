@@ -1,4 +1,5 @@
 import { router } from '@kit.ArkUI'
+import { renderHeader } from '../../common/Info'
 
 /**
  * 签约管理-通过待支付
@@ -14,7 +15,7 @@ struct ToBePaid {
       Column() {
 
         // 头部
-        this.renderHeader()
+        renderHeader("签约详情","查看协议")
 
         // 等待医生审核
         Row({space:15}){
@@ -115,24 +116,6 @@ struct ToBePaid {
 
   }
 
-  // 头部部分
-  @Builder
-  renderHeader() {
-    Row() {
-      Image($r('app.media.icon_40px_left_arrow'))
-        .width(25)
-        .onClick(() => router.back())
-      Text("签约详情")
-        .fontSize(18)
-      Text("查看协议")
-        .fontSize(14)
-        .fontColor($r('app.color.font_green'))
-    }
-    .width("100%")
-    .justifyContent(FlexAlign.SpaceBetween)
-    .padding(15)
-    .backgroundColor(Color.White)
-  }
 
 
   // 渲染节标题
