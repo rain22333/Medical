@@ -71,7 +71,7 @@ struct Medical {
         })
         this.quickAction("app.media.icon_120px_service_manage", "服务管理",()=>{
           router.pushUrl({
-            url:"component/medical/ServiceManagement"
+            url:"component/medical/Service/ServiceManagement"
           })
         })
       }
