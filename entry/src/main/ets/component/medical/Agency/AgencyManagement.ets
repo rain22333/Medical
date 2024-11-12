@@ -115,7 +115,7 @@ struct ContractManagement {
     .padding({ top: 15, bottom: 15 })
     .onClick(()=>{
       router.pushUrl({
-        url:"component/medical/ContractDetails"
+        url:"component/medical/Agency/AgencyAudit"
       })
     })
   }

@@ -2,25 +2,24 @@ import { router } from '@kit.ArkUI'
 
 @Entry
 @Component
-struct AgencyFail {
-
+struct ContractDetails {
   build() {
+
     Scroll(){
       Column() {
-
         // 头部
         this.renderHeader()
 
-        // 已驳回
+        // 等待医生审核
         Row({space:15}){
-          Image($r("app.media.icon_40px_overrule"))
+          Image($r('app.media.icon_40px_remind'))
             .width(25)
-          Text("已驳回")
-            .fontColor($r('app.color.font_color_red'))
+          Text("等待医生审核")
+            .fontColor($r('app.color.font_color_green'))
             .fontWeight(FontWeight.Lighter)
         }.width("100%")
         .padding(15)
-        .backgroundColor($r('app.color.bg_pink'))
+        .backgroundColor($r('app.color.bg_green_second'))
 
         // 居民信息
         this.renderSectionHeader("居民信息")
@@ -75,6 +74,7 @@ struct AgencyFail {
         // 签约备注
         this.renderRemark()
 
+        this.renderButton()
 
       }
       .width("100%")
@@ -134,6 +134,51 @@ struct AgencyFail {
     Divider()
   }
 
+
+  @Builder
+  renderButton(){
+    Row(){
+      Button("驳回")
+        .width("45%")
+        .type(ButtonType.Normal)
+        .backgroundColor(Color.White)
+        .border({
+          width:1,
+          color:$r('app.color.contract_detail_button_rejected')
+        })
+        .fontColor($r('app.color.contract_detail_button_rejected'))
+        .borderRadius(12)
+        .fontWeight(FontWeight.Lighter)
+        .onClick(()=>{
+          router.pushUrl({
+            url:"component/medical/Agency/AgencyFail"
+          })
+        })
+      Button("审核")
+        .width("45%")
+        .type(ButtonType.Normal)
+        .backgroundColor($r('app.color.bg_green_primary'))
+        .borderRadius(12)
+        .fontWeight(FontWeight.Lighter)
+        .onClick(()=>{
+          router.pushUrl({
+            url:"component/medical/Agency/ToBePaid"
+          })
+        })
+
+    }.width("100%")
+    .padding({
+      left:25,
+      right:25,
+      top:5,
+      bottom:25
+    })
+    .backgroundColor(Color.White)
+    .justifyContent(FlexAlign.SpaceAround)
+    .margin({
+      top:15
+    })
+  }
 
 
   // 签约备注

@@ -1,5 +1,8 @@
 import { router } from '@kit.ArkUI'
 
+/**
+ * 签约管理-签约成功
+ */
 @Entry
 @Component
 struct AgencySuccess {
