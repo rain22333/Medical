@@ -21,6 +21,7 @@
     "component/medical/Service/WaitForReview",
     "component/medical/Service/ServiceApproved",
     "component/medical/Service/RejectedService",
-    "component/medical/Service/ServiceDetail"
+    "component/medical/Service/ServiceDetail",
+    "component/response/ServiceApprovedSuccess"
   ]
 }

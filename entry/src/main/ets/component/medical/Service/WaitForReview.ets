@@ -122,7 +122,7 @@ struct WaitForReview {
         .type(ButtonType.Normal)
         .onClick(()=>{
           router.pushUrl({
-            url: "component/medical/Service/ServiceApproved"
+            url: "component/response/ServiceApprovedSuccess"
           })
         })
     }.width("100%")
