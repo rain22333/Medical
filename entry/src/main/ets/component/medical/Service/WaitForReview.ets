@@ -106,6 +106,12 @@ struct WaitForReview {
         .borderRadius(12)
         .type(ButtonType.Normal)
         .width("48%")
+        .onClick(()=>{
+          // 服务驳回之后跳转到驳回页面
+          router.pushUrl({
+            url:"component/response/ServiceApprovedFailed"
+          })
+        })
 
       Button("审核")
         .backgroundColor($r('app.color.bg_green_primary'))

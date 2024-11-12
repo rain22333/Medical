@@ -96,7 +96,7 @@ struct ServiceApproved {
   @Builder
   renderButton(){
     Row(){
-      Button("驳回")
+      Button("取消")
         .backgroundColor(Color.White)
         .border({
           width:0.5,
@@ -113,6 +113,12 @@ struct ServiceApproved {
         .borderRadius(12)
         .type(ButtonType.Normal)
         .width("48%")
+        .onClick(()=>{
+          // 点击之后跳转到取消成功页面
+          router.pushUrl({
+            url:"component/response/CancelService"
+          })
+        })
 
       Button("审核")
         .backgroundColor($r('app.color.bg_green_primary'))
