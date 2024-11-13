@@ -102,17 +102,8 @@ struct ServiceApproved {
           width:0.5,
           color:$r('app.color.border_orange')
         })
-        .padding({
-          left:25,
-          right:25,
-          top:10,
-          bottom:10
-        })
         .fontColor($r('app.color.font_color_orange'))
-        .fontWeight(FontWeight.Lighter)
-        .borderRadius(12)
-        .type(ButtonType.Normal)
-        .width("48%")
+        .buttonStyle(ButtonStyleMode.NORMAL)
         .onClick(()=>{
           // 点击之后跳转到取消成功页面
           router.pushUrl({
@@ -120,19 +111,16 @@ struct ServiceApproved {
           })
         })
 
-      Button("审核")
+      Button("服务")
         .backgroundColor($r('app.color.bg_green_primary'))
-        .padding({
-          left:25,
-          right:25,
-          top:10,
-          bottom:10
-        })
         .fontColor(Color.White)
-        .fontWeight(FontWeight.Lighter)
-        .borderRadius(12)
-        .width("48%")
-        .type(ButtonType.Normal)
+        .onClick(()=>{
+          // 点击服务跳转到健康随访页面
+          router.pushUrl({
+            url:"component/medical/Service/Healthy"
+          })
+        })
+        .buttonStyle(ButtonStyleMode.NORMAL)
     }.width("100%")
     .justifyContent(FlexAlign.SpaceBetween)
     .backgroundColor(Color.White)
@@ -143,4 +131,17 @@ struct ServiceApproved {
       bottom:25
     })
   }
+}
+
+@Extend(Button) function buttonStyle(){
+  .fontWeight(FontWeight.Lighter)
+  .borderRadius(12)
+  .width("48%")
+  .type(ButtonType.Normal)
+  .padding({
+    left:25,
+    right:25,
+    top:10,
+    bottom:10
+  })
 }

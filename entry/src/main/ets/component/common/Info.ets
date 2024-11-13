@@ -51,7 +51,7 @@ export function renderHeader(title:string,text:string) {
 
 // 渲染信息行
 @Builder
-function renderInfoRow(label:string, value:string) {
+export function renderInfoRow(label:string, value:string) {
   Row() {
     Text(label)
       .width("35%")

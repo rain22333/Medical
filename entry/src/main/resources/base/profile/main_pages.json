@@ -24,6 +24,7 @@
     "component/medical/Service/ServiceDetail",
     "component/response/ServiceApprovedSuccess",
     "component/response/ServiceApprovedFailed",
-    "component/response/CancelService"
+    "component/response/CancelService",
+    "component/medical/Service/Healthy"
   ]
 }
